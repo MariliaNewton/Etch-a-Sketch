@@ -3,10 +3,43 @@ const containerGrid = document.querySelector(".container-grid");
 const btnGridOnOff = document.querySelector(".btn-grid");
 const rangeGrid = document.querySelector(".range-grid");
 const colorPicker = document.querySelector(".input-color");
+const btnClearAll = document.querySelector(".btn-clear");
+const radioColorPicker = document.getElementById("color");
 
 let squaresGrid;
 let grid = true;
 let initialGrid = 10;
+let canColour = false;
+
+document.addEventListener("mousedown", () => (canColour = true));
+document.addEventListener("mouseup", () => (canColour = false));
+
+btnGridOnOff.addEventListener("click", function () {
+  if (grid) {
+    btnGridOnOff.style.transform = "rotate(70deg)";
+    grid = false;
+    squaresGrid.forEach((sq) => sq.classList.remove("grid-on"));
+  } else {
+    btnGridOnOff.style.transform = "rotate(0deg)";
+    grid = true;
+    squaresGrid.forEach((sq) => sq.classList.add("grid-on"));
+  }
+});
+
+btnClearAll.addEventListener("click", function () {
+  squaresGrid.forEach((sq) => {
+    sq.style.backgroundColor = `var(--baby-powder)`;
+    sq.value = 0.1;
+  });
+});
+
+rangeGrid.addEventListener("change", function () {
+  createGrid(rangeGrid.value);
+});
+
+colorPicker.addEventListener("click", function () {
+  radioColorPicker.checked = true;
+});
 
 function createGrid(size) {
   containerGrid.innerHTML = "";
@@ -30,15 +63,10 @@ function createGrid(size) {
 }
 
 function colourSquare() {
-  let canColour = false;
-
-  document.addEventListener("mousedown", () => (canColour = true));
-  document.addEventListener("mouseup", () => (canColour = false));
-
   squaresGrid.forEach((sq) => {
-    ["mousedown", "mouseover"].forEach(function (e) {
-      sq.addEventListener(e, function () {
-        if (!canColour && e !== "mousedown") return;
+    ["mousedown", "mouseover"].forEach(function (eventName) {
+      sq.addEventListener(eventName, function () {
+        if (!canColour && eventName !== "mousedown") return;
 
         const colorChoice = document.querySelector(
           ".color-choice:checked"
@@ -68,22 +96,6 @@ function colourSquare() {
     });
   });
 }
-
-btnGridOnOff.addEventListener("click", function () {
-  if (grid) {
-    btnGridOnOff.style.transform = "rotate(70deg)";
-    grid = false;
-    squaresGrid.forEach((sq) => sq.classList.remove("grid-on"));
-  } else {
-    btnGridOnOff.style.transform = "rotate(0deg)";
-    grid = true;
-    squaresGrid.forEach((sq) => sq.classList.add("grid-on"));
-  }
-});
-
-rangeGrid.addEventListener("change", function () {
-  createGrid(rangeGrid.value);
-});
 
 function init() {
   createGrid(initialGrid);
