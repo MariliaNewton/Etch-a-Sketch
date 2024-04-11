@@ -1,0 +1,260 @@
+:root {
+  --baby-powder: #fffdf7;
+  --dark-purple: #381d2a;
+  --zomp: #2ca58d;
+  --cambridge-blue: #84bc9c;
+  font-size: 12px;
+}
+
+body {
+  background-color: var(--baby-powder);
+  color: var(--dark-purple);
+  font-family: VT323, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  margin-top: -37.5rem;
+  margin-left: -31.25rem;
+  width: 62.5rem;
+  height: 75rem;
+}
+
+.container-ants {
+  display: flex;
+}
+
+.container-ants .left {
+  margin-left: 2.5rem;
+}
+
+.ball-left {
+  width: 1.875rem;
+  height: 1.875rem;
+  border-radius: 0.9375rem;
+  background-color: var(--zomp);
+  margin-left: 3.125rem;
+  margin-top: 2.5rem;
+}
+
+.ant-left {
+  height: 0.625rem;
+  width: 7.5rem;
+  background-color: var(--zomp);
+  transform: rotate(45deg);
+  margin-top: 1.875rem;
+  margin-left: 3.375rem;
+}
+
+.ball-right {
+  width: 1.875rem;
+  height: 1.875rem;
+  border-radius: 0.9375rem;
+  background-color: var(--zomp);
+  margin-left: 14.0625rem;
+  margin-bottom: 3.125rem;
+}
+
+.ant-right {
+  height: 0.625rem;
+  width: 11.25rem;
+  background-color: var(--zomp);
+  transform: rotate(-45deg);
+  margin-bottom: 3.375rem;
+  margin-left: 5rem;
+}
+
+.container-title {
+  border: 0.625rem solid var(--zomp);
+  border-top-right-radius: 9.375rem;
+  border-top-left-radius: 9.375rem;
+  margin-bottom: 1.25rem;
+}
+
+.title {
+  font-family: "Indie Flower";
+  font-size: 4.375rem;
+  text-align: center;
+  margin: 0 3.125rem;
+  margin-top: 1.25rem;
+  color: var(--dark-purple);
+}
+
+.square {
+  background-color: var(--baby-powder);
+  border: 0.0625rem solid var(--dark-purple);
+  box-sizing: border-box;
+}
+
+.container-grid {
+  display: flex;
+  flex-wrap: wrap;
+  height: 40rem;
+  width: 40rem;
+}
+
+.screen-frame {
+  height: 40rem;
+  width: 40rem;
+  border: 1.25rem solid var(--zomp);
+  border-radius: 1.25rem;
+  margin-left: 1.25rem;
+}
+
+.tv-frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--zomp);
+  height: 45rem;
+  width: 63.75rem;
+  border: 1.25rem solid var(--zomp);
+  border-radius: 1.25rem;
+}
+
+.white-space {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--cambridge-blue);
+  height: 100%;
+  width: 100%;
+  padding-right: 1.25rem;
+  border: 1.25rem solid var(--zomp);
+  border-radius: 3.75rem;
+}
+
+.control-panel {
+  background-color: #2ca58d;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-grid {
+  background-color: var(--cambridge-blue);
+  height: 8.75rem;
+  width: 8.75rem;
+  border-radius: 4.375rem;
+  border: 0;
+  padding: 0;
+  transition-duration: 1s;
+  transition-property: transform;
+}
+
+.btn-line {
+  height: 1.25rem;
+  width: 8.75rem;
+  background-color: var(--zomp);
+  transform: rotate(55deg);
+}
+
+.btn-grid:hover {
+  cursor: pointer;
+}
+
+.grid-nogrid {
+  display: flex;
+  gap: 4.375rem;
+}
+
+.grid-nogrid p {
+  font-size: 2.5rem;
+  margin: 0;
+  color: var(--dark-purple);
+}
+
+.container-grid-nogrid {
+  margin-top: 1.875rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-title {
+  font-family: "Indie Flower";
+  font-size: 1.875rem;
+  margin: 0;
+}
+
+.grid-size p {
+  font-family: "Indie Flower";
+  text-align: center;
+  font-size: 1.875rem;
+  margin: 0;
+  margin-top: 1.875rem;
+}
+
+.range-grid {
+  -webkit-appearance: none;
+  width: 11.875rem;
+  cursor: grabbing;
+  background-color: transparent;
+}
+
+.range-grid::-webkit-slider-runnable-track {
+  background-color: var(--cambridge-blue);
+  height: 0.75rem;
+  border-radius: 0.375rem;
+}
+
+.range-grid::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: var(--zomp);
+  height: 1.875rem;
+  width: 1rem;
+  border-radius: 0.25rem;
+  margin-top: -0.5rem;
+  border: 0.25rem solid var(--dark-purple);
+}
+
+.color-container p {
+  font-family: "Indie Flower";
+  text-align: center;
+  font-size: 1.875rem;
+  margin: 0;
+  margin-top: 3.125rem;
+}
+
+.color-container {
+  height: 15.625rem;
+  width: 14.5rem;
+}
+
+.color-container label {
+  font-family: "Indie Flower";
+  font-size: 1.5rem;
+}
+
+.color-container input {
+  accent-color: var(--dark-purple);
+}
+
+.input-color {
+  width: 1.875rem;
+  height: 1.875rem;
+  border-radius: 0.375rem;
+  background-color: var(--cambridge-blue);
+}
+
+/* Footer */
+.tv-feet {
+  display: flex;
+  gap: 42.5rem;
+}
+
+.right-foot,
+.left-foot {
+  margin-top: 0.625rem;
+  height: 1.875rem;
+  width: 7.5rem;
+  background-color: var(--zomp);
+}

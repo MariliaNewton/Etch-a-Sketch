@@ -4,6 +4,80 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Etch a Sketch</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Indie+Flower&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Teko:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Indie+Flower&family=Roboto+Mono:ital,wght@0,281;1,281&family=Teko:wght@300..700&family=VT323&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body></body>
+  <body>
+    <div class="container-header">
+      <div class="container-ants">
+        <div class="left">
+          <div class="ball-left"></div>
+          <div class="ant-left"></div>
+        </div>
+        <div class="right">
+          <div class="ball-right"></div>
+          <div class="ant-right"></div>
+        </div>
+      </div>
+      <div class="container-title">
+        <h2 class="title">Etch-a-Sketch</h2>
+      </div>
+      <div class="container-panel"></div>
+    </div>
+    <div class="tv-frame">
+      <div class="white-space">
+        <div class="screen-frame">
+          <div class="container-grid"></div>
+        </div>
+      </div>
+      <div class="control-panel">
+        <div class="container-grid-nogrid">
+          <p class="grid-title">Grid</p>
+          <div class="grid-nogrid">
+            <p class="grid">ON</p>
+            <p class="grid">OFF</p>
+          </div>
+          <button class="btn-grid">
+            <div class="btn-line"></div>
+          </button>
+        </div>
+        <div class="grid-size">
+          <p>Grid Size</p>
+          <input type="range" min="12" max="100" step="2" class="range-grid" />
+        </div>
+        <div class="color-container">
+          <p>Color</p>
+          <div class="color">
+            <input type="radio" value="color" />
+            <label for="Color">Color picker</label>
+            <input type="color" class="input-color" />
+          </div>
+          <div class="color-random">
+            <input type="radio" value="random" />
+            <label for="Random">Random</label>
+          </div>
+          <div class="color-progressive">
+            <input type="radio" value="random" />
+            <label for="Random">Progressive Dark</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tv-feet">
+      <div class="left-foot"></div>
+      <div class="right-foot"></div>
+    </div>
+  </body>
 </html>
