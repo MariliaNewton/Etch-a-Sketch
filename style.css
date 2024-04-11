@@ -86,11 +86,20 @@ body {
 
 .square {
   background-color: var(--baby-powder);
-  border: 0.0625rem solid var(--dark-purple);
   box-sizing: border-box;
+  transition-property: border;
+  transition-duration: 1s;
+  border: 0rem solid transparent;
+}
+
+.square.grid-on {
+  transition-property: border;
+  transition-duration: 1s;
+  border: 0.0625rem solid var(--dark-purple);
 }
 
 .container-grid {
+  background-color: var(--baby-powder);
   display: flex;
   flex-wrap: wrap;
   height: 40rem;
@@ -198,6 +207,7 @@ body {
   width: 11.875rem;
   cursor: grabbing;
   background-color: transparent;
+  outline: none;
 }
 
 .range-grid::-webkit-slider-runnable-track {
