@@ -1,5 +1,4 @@
-(function () {
-  const containerHeader = document.querySelector(".container-header");
+setTimeout(() => {
   const containerGrid = document.querySelector(".container-grid");
   const btnGridOnOff = document.querySelector(".btn-grid");
   const rangeGrid = document.querySelector(".range-grid");
@@ -104,4 +103,4 @@
   }
 
   init();
-})();
+}, 500);
