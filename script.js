@@ -17,11 +17,11 @@ btnGridOnOff.addEventListener("click", function () {
   if (grid) {
     btnGridOnOff.style.transform = "rotate(70deg)";
     grid = false;
-    squaresGrid.forEach((sq) => sq.classList.remove("grid-on"));
+    containerGrid.classList.remove("has-grid");
   } else {
     btnGridOnOff.style.transform = "rotate(0deg)";
     grid = true;
-    squaresGrid.forEach((sq) => sq.classList.add("grid-on"));
+    containerGrid.classList.add("has-grid");
   }
 });
 
@@ -48,13 +48,10 @@ function createGrid(size) {
   for (let y = 0; y < size * size; y++) {
     const square = document.createElement("div");
     square.classList.add("square");
-    square.classList.add("grid-on");
     // Value used for progressive darkening later
     square.value = 0.1;
 
     containerGrid.appendChild(square);
-
-    // Get a node list with all squares on the grid
   }
 
   squaresGrid = document.querySelectorAll(".square");

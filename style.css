@@ -95,9 +95,7 @@ body {
   height: var(--square-size);
 }
 
-.square.grid-on {
-  transition-property: border;
-  transition-duration: 1s;
+.has-grid .square {
   border: 0.0625rem solid var(--dark-purple);
 }
 
