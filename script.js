@@ -32,7 +32,7 @@ btnClearAll.addEventListener("click", function () {
   });
 });
 
-rangeGrid.addEventListener("change", function () {
+rangeGrid.addEventListener("input", function () {
   createGrid(rangeGrid.value);
 });
 
