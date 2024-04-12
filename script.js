@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+window.addEventListener("load", function () {
   const containerGrid = document.querySelector(".container-grid");
   const btnGridOnOff = document.querySelector(".btn-grid");
   const rangeGrid = document.querySelector(".range-grid");
