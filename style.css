@@ -91,6 +91,8 @@ body {
   transition-property: border;
   transition-duration: 1s;
   border: 0rem solid transparent;
+  width: var(--square-size);
+  height: var(--square-size);
 }
 
 .square.grid-on {
@@ -105,6 +107,7 @@ body {
   flex-wrap: wrap;
   height: 40rem;
   width: 40rem;
+  --square-size: 5%;
 }
 
 .screen-frame {

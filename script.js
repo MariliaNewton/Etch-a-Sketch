@@ -43,12 +43,12 @@ colorPicker.addEventListener("click", function () {
 function createGrid(size) {
   containerGrid.innerHTML = "";
   squareSize = 100 / size;
+  containerGrid.style.setProperty("--square-size", `${squareSize}%`);
+
   for (let y = 0; y < size * size; y++) {
     const square = document.createElement("div");
     square.classList.add("square");
     square.classList.add("grid-on");
-    square.style.height = `${squareSize}%`;
-    square.style.width = `${squareSize}%`;
     // Value used for progressive darkening later
     square.value = 0.1;
 
